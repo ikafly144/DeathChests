@@ -1,6 +1,6 @@
 data modify storage deathchest:__inventory__ Inventory set from entity @s Inventory
 execute if data storage deathchest:__inventory__ Inventory[27] run function deathchest:chest2
-execute unless data storage deathchest:__inventory__ Inventory[27] run summon chest_minecart ~ ~ ~ {Tags:["DeathChest","DBC"],Invulnerable:1b,CustomName: '{"text":"DeathChest"}',CustomNameVisible:1b}
+execute unless data storage deathchest:__inventory__ Inventory[27] align xz run summon chest_minecart ~.5 ~ ~.5 {Tags:["DeathChest","DBC"],Invulnerable:1b,CustomName: '{"text":"DeathChest"}',CustomNameVisible:1b}
 
 execute if data storage deathchest:__inventory__ Inventory[0] run data modify entity @e[tag=DeathChest,limit=1,sort=nearest] Items append value {id:stick, Slot:0b, Count:1}
 data modify entity @e[tag=DeathChest,limit=1,sort=nearest] Items[0].id set from storage deathchest:__inventory__ Inventory[0].id

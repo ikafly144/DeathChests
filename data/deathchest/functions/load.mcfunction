@@ -8,5 +8,5 @@ scoreboard objectives add DC.UUID2 dummy
 scoreboard objectives add DC.UUID3 dummy
 scoreboard objectives add DC.UUID4 dummy
 scoreboard objectives add DC.version dummy
-execute unless score $version DC.version matches 1 run function deathchest:setup
-scoreboard players set $version DC.version 1
+execute unless score $version DC.version matches 2 run function deathchest:setup
+scoreboard players set $version DC.version 2

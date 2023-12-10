@@ -1,5 +1,5 @@
 #setb lock ~ ~1 ~ minecraft:barrel[facing=up]{CustomName:'{"text":"Death Barrel"}'}
-summon chest_minecart ~ ~ ~ {Tags:["DeathChest","DBC"],Invulnerable:1b,CustomName: '{"text":"DeathChest"}',Passengers:[{id:"minecraft:chest_minecart",Tags:["DeathChest2","DBC"],Invulnerable:1b,CustomName: '{"text":"DeathChest"}',CustomNameVisible:1b}]}
+execute align xz run summon chest_minecart ~.5 ~ ~.5 {Tags:["DeathChest","DBC"],Invulnerable:1b,CustomName: '{"text":"DeathChest"}',Passengers:[{id:"minecraft:chest_minecart",Tags:["DeathChest2","DBC"],Invulnerable:1b,CustomName: '{"text":"DeathChest"}',CustomNameVisible:1b}]}
 
 execute if data storage deathchest:__inventory__ Inventory[27] run data modify entity @e[tag=DeathChest2,limit=1,sort=nearest] Items append value {id:stick, Slot:0b, Count:1}
 data modify entity @e[tag=DeathChest2,limit=1,sort=nearest] Items[0].id set from storage deathchest:__inventory__ Inventory[27].id
