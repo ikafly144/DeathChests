@@ -5,7 +5,7 @@
         }
     },
     "rewards": {
-        "function": "deathchest:killed"
+        "function": "deathchest:event/on_death"
     },
     "sends_telemetry_event": false
 }

@@ -8,5 +8,9 @@ scoreboard objectives add DC.UUID2 dummy
 scoreboard objectives add DC.UUID3 dummy
 scoreboard objectives add DC.UUID4 dummy
 scoreboard objectives add DC.version dummy
-execute unless score $version DC.version matches 2 run function deathchest:setup
-scoreboard players set $version DC.version 2
+team add DC.NoColision ""
+team modify DC.NoColision collisionRule never
+team modify DC.NoColision color dark_red
+team modify DC.NoColision friendlyFire false
+execute unless score $version DC.version matches 3 run function deathchest:setup
+scoreboard players set $version DC.version 3
