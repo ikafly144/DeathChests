@@ -1,4 +1,3 @@
-execute store result score @s DC.xp.lvl run xp query @s levels
 scoreboard players operation @s DC.xp.operation = @s DC.xp.lvl
 scoreboard players operation @s DC.xp.operation *= #7 DC.xp.operation
 execute at @s summon experience_orb store result entity @s Value short 1 run scoreboard players get @s DC.xp.operation
