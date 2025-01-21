@@ -1,5 +1,7 @@
 advancement revoke @s only deathchest:death
 execute unless entity @s[nbt={Health:0f}] run return 0
+execute if entity @s[gamemode=creative] run return 0
+execute if entity @s[gamemode=spectator] run return 0
 
 clear @s #deathchest:items[enchantments={levels:{"minecraft:vanishing_curse":1}}]
 
