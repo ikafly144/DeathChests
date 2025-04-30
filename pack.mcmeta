@@ -1,6 +1,25 @@
 {
     "pack": {
-        "pack_format": 61,
-        "description": "\u00a76\u00a7l\u00a7oDeath Chest\u00a76 Datapack\u00a7c by ikafly144\u00a7r\n\u00a79Release page:\u00a7r \u00a71\u00a7l\u00a7nmodrinth.com\/datapack\/deathchest"
+        "description": [
+            {
+                "text": "DeathChest",
+                "color": "gold"
+            },
+            " ",
+            {
+                "text": "by ikafly144",
+                "color": "aqua"
+            },
+            "\n",
+            {
+                "text": "Release in modrinth",
+                "color": "green"
+            }
+        ],
+        "pack_format": 71,
+        "supported_formats": {
+            "max_inclusive": 71,
+            "min_inclusive": 48
+        }
     }
 }

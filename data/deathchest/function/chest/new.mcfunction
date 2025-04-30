@@ -10,4 +10,4 @@ tag @s add DeathChest.Temp
 tag @s add DeathChest.Base
 team join DC.NoColision @s
 data modify entity @s Items set from storage deathchest:__copy__ chest_1
-execute if data storage deathchest:__copy__ chest_2[-1] summon minecraft:chest_minecart run function deathchest:chest/2
+execute if data storage deathchest:__copy__ chest_2[-1] summon minecraft:chest_minecart run function deathchest:chest/chest_2

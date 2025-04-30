@@ -1,4 +1,4 @@
-#> deathchest:chest/2
+#> deathchest:chest/chest_2
 
 data modify entity @s Invulnerable set value 1b
 data modify entity @s NoGravity set value 1b
