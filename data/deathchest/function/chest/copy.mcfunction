@@ -59,15 +59,16 @@ data modify storage deathchest:__copy__ chest_2 append from storage deathchest:_
 execute if data storage deathchest:__copy__ chest_2[{Slot:35b}] run data modify storage deathchest:__copy__ chest_2[{Slot:35b}].Slot set value 8b
 
 # armor
-data modify storage deathchest:__copy__ chest_2 append from storage deathchest:__copy__ inventory[{Slot:103b}]
-execute if data storage deathchest:__copy__ chest_2[{Slot:103b}] run data modify storage deathchest:__copy__ chest_2[{Slot:103b}].Slot set value 9b
-data modify storage deathchest:__copy__ chest_2 append from storage deathchest:__copy__ inventory[{Slot:102b}]
-execute if data storage deathchest:__copy__ chest_2[{Slot:102b}] run data modify storage deathchest:__copy__ chest_2[{Slot:102b}].Slot set value 10b
-data modify storage deathchest:__copy__ chest_2 append from storage deathchest:__copy__ inventory[{Slot:101b}]
-execute if data storage deathchest:__copy__ chest_2[{Slot:101b}] run data modify storage deathchest:__copy__ chest_2[{Slot:101b}].Slot set value 11b
-data modify storage deathchest:__copy__ chest_2 append from storage deathchest:__copy__ inventory[{Slot:100b}]
-execute if data storage deathchest:__copy__ chest_2[{Slot:100b}] run data modify storage deathchest:__copy__ chest_2[{Slot:100b}].Slot set value 12b
+data modify storage deathchest:__copy__ equipment set from entity @s equipment
+data modify storage deathchest:__copy__ chest_2 append from storage deathchest:__copy__ equipment.head
+execute if data storage deathchest:__copy__ chest_2[-1] run data modify storage deathchest:__copy__ chest_2[-1].Slot set value 9b
+data modify storage deathchest:__copy__ chest_2 append from storage deathchest:__copy__ equipment.chest
+execute if data storage deathchest:__copy__ chest_2[-1] run data modify storage deathchest:__copy__ chest_2[-1].Slot set value 10b
+data modify storage deathchest:__copy__ chest_2 append from storage deathchest:__copy__ equipment.legs
+execute if data storage deathchest:__copy__ chest_2[-1] run data modify storage deathchest:__copy__ chest_2[-1].Slot set value 11b
+data modify storage deathchest:__copy__ chest_2 append from storage deathchest:__copy__ equipment.feet
+execute if data storage deathchest:__copy__ chest_2[-1] run data modify storage deathchest:__copy__ chest_2[-1].Slot set value 12b
 
 # offhand
-data modify storage deathchest:__copy__ chest_2 append from storage deathchest:__copy__ inventory[{Slot:-106b}]
-execute if data storage deathchest:__copy__ chest_2[{Slot:-106b}] run data modify storage deathchest:__copy__ chest_2[{Slot:-106b}].Slot set value 13b
+data modify storage deathchest:__copy__ chest_2 append from storage deathchest:__copy__ equipment.offhand
+execute if data storage deathchest:__copy__ chest_2[-1] run data modify storage deathchest:__copy__ chest_2[-1].Slot set value 13b
