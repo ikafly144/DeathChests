@@ -1,6 +1,7 @@
 #> deathchest:chest/copy
 
 data remove storage deathchest:__copy__ inventory
+data remove storage deathchest:__copy__ equipment
 data remove storage deathchest:__copy__ chest_1
 data remove storage deathchest:__copy__ chest_2
 
@@ -34,9 +35,6 @@ data modify storage deathchest:__copy__ chest_1 append from storage deathchest:_
 data modify storage deathchest:__copy__ chest_1 append from storage deathchest:__copy__ inventory[{Slot:24b}]
 data modify storage deathchest:__copy__ chest_1 append from storage deathchest:__copy__ inventory[{Slot:25b}]
 data modify storage deathchest:__copy__ chest_1 append from storage deathchest:__copy__ inventory[{Slot:26b}]
-
-# initialize chest_2
-data modify storage deathchest:__copy__ chest_2 set value []
 
 # inventory 3rd row
 data modify storage deathchest:__copy__ chest_2 append from storage deathchest:__copy__ inventory[{Slot:27b}]

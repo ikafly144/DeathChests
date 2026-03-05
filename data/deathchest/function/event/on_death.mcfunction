@@ -15,9 +15,9 @@ execute store result score @s DC.pos.y run data get entity @s Pos[1]
 execute if entity @s[nbt={Dimension:"minecraft:the_end"}] if score @s DC.pos.y matches ..0 run function deathchest:chest/uuid_copy
 execute if entity @s[nbt={Dimension:"minecraft:the_end"}] if score @s DC.pos.y matches ..0 as @n[type=minecraft:chest_minecart,tag=DeathChest.Chest1,tag=DeathChest.Temp] run function deathchest:chest/the_end
 
-gamerule keepInventory false
+gamerule keep_inventory false
 kill @s
-gamerule keepInventory true
+gamerule keep_inventory true
 clear
 
 loot replace entity @s hotbar.0 loot deathchest:set_string
